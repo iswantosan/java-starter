@@ -6,6 +6,7 @@ public class InterestCalculatorOCP {
     public static final String CURRENT = "CURRENT";
     public static final String FIXED_DEPOSIT = "FIXED_DEPOSIT";
 
+    // close modification alias idak boleh diotak atik logikanya
     public double calculateInterest(String accountType, double balance, int months) {
         if (SAVINGS.equals(accountType)) {
             return balance * 0.03 * months / 12;
