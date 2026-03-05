@@ -1,35 +1,19 @@
-# Training — Java Starter
+## case 1
+- liskov substitution (LSP)
+- karena ada perbedaan antara method yang di override
 
-Project Maven + Java 17.
+## case 2
+- dependency inversion (DIP)
+- karena begantung pada spesifik implementasi, bukan pada abstraksi
 
-## Buka project di VS Code
+## case 3
+- single responsibility principle (SRP)
+- karena class memiliki banyak tanggung jawab yang tidak menggambarkan tanggung jawabnya
 
-1. Pasang ekstensi **Extension Pack for Java** (Microsoft) kalau belum.
-2. **File → Open Folder** (atau `Ctrl+K Ctrl+O`).
-3. Pilih folder project ini (yang ada `pom.xml`-nya).
-4. Tunggu VS Code / Maven selesai load (bawah kanan: "Loading..." hilang).
+## case 4
+- open/closed principle (OCP)
+- karena ketika ada perubahan atau penembahan, maka class harus di ubah
 
-## Cara run di VS Code
-
-**Opsi A — Run file yang punya `main`**
-
-- Buka file `.java` yang ada method `public static void main(String[] args)`.
-- Klik **Run** di atas `main`, atau klik kanan file → **Run Java**.
-- Bisa juga **Run and Debug** (F5) lalu pilih "Run current file".
-
-**Opsi B — Via terminal (Maven)**
-
-```bash
-# Compile
-mvn compile
-
-# Run class tertentu (ganti dengan package + nama class)
-mvn exec:java -Dexec.mainClass="com.training.oop.DemoRunner"
-```
-
-Ganti `com.training.oop.DemoRunner` dengan class yang punya `main` yang mau dijalankan.
-
-## Requirement
-
-- JDK 17
-- Maven 3.x (atau pakai Maven wrapper / ekstensi Java di VS Code)
+## case 5
+- interface segregation (ISP)
+- karena ada method yang harus di override padahal tidak dibutuhkan oleh class tersebut
