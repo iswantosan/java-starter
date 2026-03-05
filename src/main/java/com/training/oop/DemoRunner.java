@@ -1,6 +1,7 @@
 package com.training.oop;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -122,6 +123,28 @@ public class DemoRunner {
                 .andThen(replaceAWithStar)
                 .apply(username, password);
         System.out.println("Final String: " + finalString);
+
+        System.out.println("\n============================================================\n");
+        // Ambil hanya trans >= 1000
+        // Hilangkan trans duplicate
+        // tambah biaya admin 50 pada setiap transaksi
+        // ambil nilai max
+        // kalau tidak ada tampil 0
+
+        List<Integer> transactions = List.of(500, 1200, 300, 2000, 1500, 700, 1000);
+        int testMaxFilter = 1000;
+
+        Optional<Integer> maxTransaction = Optional.of(
+                transactions.stream()
+                        .filter(n -> n >= testMaxFilter)
+                        .distinct()
+                        .map(n -> n + 50)
+                        .max(Integer::compareTo)
+                        .orElse(0));
+
+        System.out.println("Max Transaction: " + maxTransaction);
+
+        System.out.println("\n============================================================\n");
     }
 
     static List<Integer> even(List<Integer> numbers) {
