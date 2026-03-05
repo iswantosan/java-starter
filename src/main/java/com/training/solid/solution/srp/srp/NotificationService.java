@@ -1,4 +1,4 @@
-package com.training.solid.solution.srp;
+package com.training.solid.solution.srp.srp;
 
 public class NotificationService {
     public void sendNotification(String subject, String body, String to) {

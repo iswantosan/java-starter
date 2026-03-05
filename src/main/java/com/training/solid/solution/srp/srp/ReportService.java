@@ -1,4 +1,4 @@
-package com.training.solid.solution.srp;
+package com.training.solid.solution.srp.srp;
 
 public class ReportService {
     public void generateReport(String type, String content) {

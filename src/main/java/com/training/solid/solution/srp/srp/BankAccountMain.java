@@ -1,4 +1,4 @@
-package com.training.solid.solution.srp;
+package com.training.solid.solution.srp.srp;
 
 public class BankAccountMain {
     public static void main(String[] args) {
