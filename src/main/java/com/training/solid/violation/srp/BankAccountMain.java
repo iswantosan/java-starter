@@ -1,5 +1,7 @@
 package com.training.solid.violation.srp;
 
+import com.training.solid.solution.srp.BankAccountSRP;
+
 public class BankAccountMain {
 
     public static void main(String[] args) {

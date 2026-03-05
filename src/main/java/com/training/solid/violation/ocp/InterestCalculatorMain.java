@@ -1,5 +1,7 @@
 package com.training.solid.violation.ocp;
 
+import com.training.solid.solution.ocp.InterestCalculatorOCP;
+
 public class InterestCalculatorMain {
 
     public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class InterestCalculatorMain {
         double balance = 100_000_000;
         int months = 12;
 
-        System.out.println("Savings Interest: " +
+        /*System.out.println("Savings Interest: " +
                 calculator.calculateInterest(InterestCalculatorOCP.SAVINGS, balance, months));
 
         System.out.println("Current Interest: " +
@@ -20,6 +22,6 @@ public class InterestCalculatorMain {
 
         // 🔥 Case baru
         System.out.println("Premium Interest: " +
-                calculator.calculateInterest("PREMIUM", balance, months));
+                calculator.calculateInterest("PREMIUM", balance, months));*/
     }
 }

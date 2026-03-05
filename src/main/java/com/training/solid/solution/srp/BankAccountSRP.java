@@ -1,4 +1,4 @@
-package com.training.solid.violation.srp;
+package com.training.solid.solution.srp;
 
 public class BankAccountSRP {
 
@@ -15,28 +15,18 @@ public class BankAccountSRP {
     public void deposit(double amount) {
         if (amount <= 0) throw new IllegalArgumentException("Amount must be positive");
         balance += amount;
-        sendEmailNotification("Deposit", amount);
-        generateTransactionReport("DEPOSIT", amount);
+        
+   
     }
 
     public void withdraw(double amount) {
         if (amount <= 0) throw new IllegalArgumentException("Amount must be positive");
         if (amount > balance) throw new IllegalArgumentException("Insufficient balance");
         balance -= amount;
-        sendEmailNotification("Withdraw", amount);
-        generateTransactionReport("WITHDRAW", amount);
+        
+        
     }
 
-    private void sendEmailNotification(String action, double amount) {
-        String subject = "Bank Notification - " + action;
-        String body = "Your account " + accountNumber + " " + action.toLowerCase() + " Rp " + amount;
-        System.out.println("[EMAIL to " + customerEmail + "] " + subject + ": " + body);
-    }
-
-    private void generateTransactionReport(String type, double amount) {
-        String report = "REPORT: " + type + " " + amount + " on " + accountNumber;
-        System.out.println(report);
-    }
 
     public double getBalance() {
         return balance;
@@ -44,5 +34,8 @@ public class BankAccountSRP {
 
     public String getAccountNumber() {
         return accountNumber;
+    }
+     public String getCustomerEmail() {
+        return customerEmail;
     }
 }
