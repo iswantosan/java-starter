@@ -1,35 +1,9 @@
-# Training — Java Starter
+case 1: pada case 1 terlihat bahwa fungsi tarik yang dipanggil, di override tapi menambahkan logic untuk mengecek tanggal jatuh tempo, sedangkan berbeda dengan fungsi awal tariknya yang hanya mengecek saldo. ini melanggar LSP
 
-Project Maven + Java 17.
+case 2: pada case 2 terlihat pada send dependency nya bergantung pada abstraksi bukan implementasi konkret, sehingga ini melanggar DIP
 
-## Buka project di VS Code
+case 3: jika melihat dari isinya code pada case 3, terlihat pada classnya terdapat open saving account, send welcome sms dan register loyalty program, ini seharusnya terpisah tidak disamakan jadi 1 class. maka ini melanggar SRP
 
-1. Pasang ekstensi **Extension Pack for Java** (Microsoft) kalau belum.
-2. **File → Open Folder** (atau `Ctrl+K Ctrl+O`).
-3. Pilih folder project ini (yang ada `pom.xml`-nya).
-4. Tunggu VS Code / Maven selesai load (bawah kanan: "Loading..." hilang).
+case 4: pada case 4 terlihat bahwa classnya ini menyebabkan apabila ada penambahan baru akan selalu harus merubah ke dalam class ini, sehingga hal ini melanggar OCP
 
-## Cara run di VS Code
-
-**Opsi A — Run file yang punya `main`**
-
-- Buka file `.java` yang ada method `public static void main(String[] args)`.
-- Klik **Run** di atas `main`, atau klik kanan file → **Run Java**.
-- Bisa juga **Run and Debug** (F5) lalu pilih "Run current file".
-
-**Opsi B — Via terminal (Maven)**
-
-```bash
-# Compile
-mvn compile
-
-# Run class tertentu (ganti dengan package + nama class)
-mvn exec:java -Dexec.mainClass="com.training.oop.DemoRunner"
-```
-
-Ganti `com.training.oop.DemoRunner` dengan class yang punya `main` yang mau dijalankan.
-
-## Requirement
-
-- JDK 17
-- Maven 3.x (atau pakai Maven wrapper / ekstensi Java di VS Code)
+case 5: pada case 5 terlihat bahwa classnya terdapat banyak abstraction, yang seharusnya dipisah pisah, sesuai dengan kebutuhan nya saja. maka disini melanggar ISP
