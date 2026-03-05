@@ -1,7 +1,6 @@
 package com.training.coba;
 
 import java.util.List;
-import java.util.OptionalInt;
 
 public class demo3 {
     
@@ -27,15 +26,13 @@ public class demo3 {
 
         List<Integer> transactions = List.of(500,1200,300,2000,1500,700,1800);
 
-        OptionalInt totalTransactions = transactions.stream()
+        int totalTransactions = transactions.stream()
         .filter(t -> t >= 1000)
         .distinct()
         .mapToInt(t -> t+50)
-        .max();
+        .max()
+        .orElse(0);
 
-        totalTransactions.ifPresentOrElse(
-            max -> System.out.println("angka yang paling tinggi: " + max),
-            () -> System.out.println(0)
-        );
+        System.out.println("angka yang paling tinggi: " + totalTransactions);
     }
 }
