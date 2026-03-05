@@ -35,7 +35,7 @@ public class demo3 {
 
         totalTransactions.ifPresentOrElse(
             max -> System.out.println("angka yang paling tinggi: " + max),
-            () -> System.out.println("Tidak ada transaksi yang memenuhi kriteria.")
+            () -> System.out.println(0)
         );
     }
 }
