@@ -28,5 +28,9 @@ public class Hash {
 //        Step 4
 //        Ganti semua huruf a menjadi karakter *
         Function<String, String> hash = (string) -> string.replaceAll("a", "*");
+
+        String result = combine.andThen(trim).andThen(lowerCase).andThen(hash).apply("Bangun", "Password");
+
+        System.out.println(result);
     }
 }
