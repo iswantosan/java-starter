@@ -1,0 +1,19 @@
+case 1
+- violate principle (L)
+- karena function yang digunakan pada subclass berbeda dengan parent
+
+case 2
+- violate principle (I)
+- karena memaksa class untuk menjalankan function pdfWriter
+
+case 3
+- violate principle (S)
+- karena class memiliki fungsi untuk registrasi dan notifikasi
+
+case 4
+- violate principle (O)
+- karena jika terdapat jenis transaksi baru, code lama juga akan berubah
+
+case 5
+- violate principle (D)
+- karena subclass harus terdependency dengan produk yang tidak diperlukan
