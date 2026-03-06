@@ -1,4 +1,4 @@
-package fp;
+package com.training.fp;
 
 import java.util.List;
 
