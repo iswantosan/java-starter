@@ -25,6 +25,8 @@ public class demo3 {
 
         System.out.println("Hasil : " + result);
 
+        System.out.println(Thread.currentThread().getName());
+
     }
 
 }
