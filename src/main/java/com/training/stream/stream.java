@@ -16,6 +16,6 @@ public class stream {
         .orElse(0);
 
         System.out.println("hasil : " + integer);
-    }
-    
+        System.out.println(Thread.currentThread().getName());
+    }    
 }
